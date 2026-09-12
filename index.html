@@ -5,224 +5,698 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-```
-<title>Priyanshu Kumar | Java Developer</title>
-
-<link rel="stylesheet" href="style.css">
-```
-
+    <meta name="description" content="Priyanshu Kumar - Java Backend Developer & AI/ML Enthusiast. B.Tech in AI & ML, skilled in Java, Spring Boot, MySQL, and Python.">
+    <title>Priyanshu Kumar | Java Developer & AI/ML Enthusiast</title>
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
+    <!-- Tech Grid Background Pattern -->
+    <div class="bg-grid-pattern"></div>
 
-```
-<!-- Navigation -->
-<nav>
-    <h2>Priyanshu Kumar</h2>
+    <!-- Top Scroll Progress Bar -->
+    <div id="scroll-progress"></div>
 
-    <button id="menu-btn">☰</button>
+    <!-- Toast Notification Container -->
+    <div id="toast-container" class="toast-container"></div>
 
-    <ul id="nav-links">
-        <li><a href="#home">Home</a></li>
-        <li><a href="#about">About</a></li>
-        <li><a href="#skills">Skills</a></li>
-        <li><a href="#projects">Projects</a></li>
-        <li><a href="#education">Education</a></li>
-        <li><a href="#contact">Contact</a></li>
-    </ul>
+    <!-- Navigation Header -->
+    <header id="header">
+        <nav class="navbar">
+            <a href="#home" class="nav-logo">
+                <span class="logo-bracket">&lt;</span>PK<span class="logo-slash">/</span><span class="logo-bracket">&gt;</span>
+                <span class="logo-text">Priyanshu</span>
+            </a>
 
-    <button id="theme-btn">🌙</button>
-</nav>
+            <div class="nav-menu" id="nav-menu">
+                <ul class="nav-links" id="nav-links">
+                    <li><a href="#home" class="nav-link active">Home</a></li>
+                    <li><a href="#about" class="nav-link">About</a></li>
+                    <li><a href="#skills" class="nav-link">Skills</a></li>
+                    <li><a href="#projects" class="nav-link">Projects</a></li>
+                    <li><a href="#education" class="nav-link">Education</a></li>
+                    <li><a href="#contact" class="nav-link">Contact</a></li>
+                </ul>
+            </div>
 
+            <div class="nav-actions">
+                <button id="theme-btn" class="theme-toggle" aria-label="Toggle theme" title="Toggle dark/light mode">
+                    <span class="theme-icon">🌙</span>
+                </button>
+                <button id="menu-btn" class="menu-toggle" aria-label="Toggle navigation menu">
+                    <span class="hamburger-line"></span>
+                    <span class="hamburger-line"></span>
+                    <span class="hamburger-line"></span>
+                </button>
+            </div>
+        </nav>
+    </header>
 
-<!-- Home -->
-<section id="home">
+    <main>
+        <!-- Home / Hero Section -->
+        <section id="home" class="hero-section">
+            <div class="hero-background-glow glow-1"></div>
+            <div class="hero-background-glow glow-2"></div>
+            <div class="hero-background-glow glow-3"></div>
 
-    <div class="hero-content">
+            <div class="container hero-container">
+                <div class="hero-content">
+                    <div class="status-badge">
+                        <span class="status-pulse"></span>
+                        <span>Available for Internships & Full-Time Roles</span>
+                    </div>
 
-        <p>Hello, I'm</p>
+                    <h1 class="hero-title">
+                        Hi, I'm <span class="gradient-text">Priyanshu Kumar</span>
+                    </h1>
 
-        <h1>Priyanshu Kumar</h1>
+                    <div class="typing-container">
+                        <span class="typing-prefix">I engineer </span>
+                        <span id="typing-text" class="typing-text"></span>
+                        <span class="typing-cursor">|</span>
+                    </div>
 
-        <h2>Java Developer | AI/ML Enthusiast</h2>
+                    <p class="hero-description">
+                        B.Tech in Artificial Intelligence & Machine Learning at <strong>Galgotias College (GCET)</strong>.
+                        Specialized in high-performance <strong>Java backend architecture</strong>, <strong>Spring Boot microservices</strong>,
+                        and practical <strong>AI / RAG</strong> applications.
+                    </p>
 
-        <p>
-            I am a B.Tech student passionate about Java development,
-            backend technologies, and Artificial Intelligence.
-            I enjoy learning by building practical projects.
-        </p>
+                    <div class="hero-actions">
+                        <a href="#projects" class="btn btn-primary">
+                            <span>Explore Projects</span>
+                            <svg class="btn-icon" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <line x1="5" y1="12" x2="19" y2="12"></line>
+                                <polyline points="12 5 19 12 12 19"></polyline>
+                            </svg>
+                        </a>
+                        <a href="#contact" class="btn btn-secondary">
+                            <span>Get In Touch</span>
+                        </a>
+                    </div>
 
-        <div class="hero-buttons">
-            <a href="#projects">View Projects</a>
-            <a href="#contact">Contact Me</a>
+                    <div class="social-links hero-socials">
+                        <a href="https://github.com/priyanshuanand051-byte" target="_blank" rel="noopener noreferrer" class="social-btn" title="GitHub Profile">
+                            <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor">
+                                <path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/>
+                            </svg>
+                            <span>GitHub</span>
+                        </a>
+                        <a href="https://www.linkedin.com/in/priyanshukumar3" target="_blank" rel="noopener noreferrer" class="social-btn" title="LinkedIn Profile">
+                            <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor">
+                                <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/>
+                            </svg>
+                            <span>LinkedIn</span>
+                        </a>
+                        <a href="mailto:priyanshuanand051@gmail.com" class="social-btn" title="Email Priyanshu">
+                            <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+                                <polyline points="22,6 12,13 2,6"></polyline>
+                            </svg>
+                            <span>Email</span>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- macOS Style Interactive IDE Window -->
+                <div class="hero-visual">
+                    <div class="code-window-card">
+                        <div class="window-header">
+                            <div class="window-controls">
+                                <span class="control-dot dot-close"></span>
+                                <span class="control-dot dot-min"></span>
+                                <span class="control-dot dot-expand"></span>
+                            </div>
+                            <div class="window-tabs">
+                                <button class="code-tab-btn active" data-tab="tab-java">
+                                    <span class="tab-icon">☕</span> Priyanshu.java
+                                </button>
+                                <button class="code-tab-btn" data-tab="tab-python">
+                                    <span class="tab-icon">🐍</span> DocScanner.py
+                                </button>
+                            </div>
+                            <button class="copy-code-btn" id="copy-code-btn" title="Copy code snippet">
+                                <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2">
+                                    <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
+                                    <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
+                                </svg>
+                                <span>Copy</span>
+                            </button>
+                        </div>
+                        <div class="window-body">
+                            <div class="code-tab-content active" id="tab-java">
+                                <pre class="code-block"><code><span class="c-comment">// Priyanshu Kumar - Java Backend Engineer</span>
+<span class="c-keyword">package</span> dev.priyanshu;
+
+<span class="c-keyword">public class</span> <span class="c-class">Priyanshu</span> <span class="c-keyword">implements</span> <span class="c-interface">BackendEngineer</span> {
+    <span class="c-type">String</span> university = <span class="c-string">"Galgotias College (GCET)"</span>;
+    <span class="c-type">String</span> major      = <span class="c-string">"B.Tech in AI &amp; ML ('28)"</span>;
+    <span class="c-type">String[]</span> skills   = {<span class="c-string">"Java"</span>, <span class="c-string">"Spring Boot"</span>, <span class="c-string">"MySQL"</span>, <span class="c-string">"RAG"</span>};
+    <span class="c-type">boolean</span> available = <span class="c-boolean">true</span>;
+
+    <span class="c-annotation">@Override</span>
+    <span class="c-keyword">public void</span> <span class="c-method">buildSystems</span>() {
+        <span class="c-keyword">while</span> (alive) {
+            architectScalableAPIs();
+            deployIntelligentPipelines();
+        }
+    }
+}</code></pre>
+                            </div>
+                            <div class="code-tab-content" id="tab-python">
+                                <pre class="code-block"><code><span class="c-comment"># DocScanner OCR &amp; RAG Intelligence</span>
+<span class="c-keyword">import</span> pytesseract
+<span class="c-keyword">from</span> rag_engine <span class="c-keyword">import</span> ContextRetriever
+
+<span class="c-keyword">class</span> <span class="c-class">DocScanner</span>:
+    <span class="c-keyword">def</span> <span class="c-method">__init__</span>(self, file_path: <span class="c-type">str</span>):
+        self.doc_path = file_path
+        self.rag = ContextRetriever()
+
+    <span class="c-keyword">def</span> <span class="c-method">extract_and_query</span>(self, query: <span class="c-type">str</span>) -> <span class="c-type">str</span>:
+        text = pytesseract.image_to_string(self.doc_path)
+        <span class="c-keyword">return</span> self.rag.generate_answer(text, query)</code></pre>
+                            </div>
+                        </div>
+                        <div class="window-footer">
+                            <div class="window-status">
+                                <span class="status-indicator"></span> Ready &bull; UTF-8 &bull; 0 Errors
+                            </div>
+                            <div class="window-meta">Priyanshu Kumar &bull; GCET</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Quick Stats Metrics Bar -->
+        <section class="quick-stats-bar">
+            <div class="container">
+                <div class="stats-grid">
+                    <div class="stat-card">
+                        <div class="stat-number">4+</div>
+                        <div class="stat-label">Production Projects</div>
+                    </div>
+                    <div class="stat-divider"></div>
+                    <div class="stat-card">
+                        <div class="stat-number">12+</div>
+                        <div class="stat-label">Technologies Mastered</div>
+                    </div>
+                    <div class="stat-divider"></div>
+                    <div class="stat-card">
+                        <div class="stat-number">GCET</div>
+                        <div class="stat-label">B.Tech AI &amp; ML '28</div>
+                    </div>
+                    <div class="stat-divider"></div>
+                    <div class="stat-card">
+                        <div class="stat-number">100%</div>
+                        <div class="stat-label">Backend Focus &amp; Passion</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- About Section -->
+        <section id="about" class="section">
+            <div class="container">
+                <div class="section-header">
+                    <span class="section-subtitle">Get to know me</span>
+                    <h2 class="section-title">About Me</h2>
+                    <div class="section-line"></div>
+                </div>
+
+                <div class="about-grid">
+                    <div class="about-text-card">
+                        <p class="about-lead">
+                            Hello! I am a passionate developer currently pursuing my 
+                            <strong>B.Tech in Artificial Intelligence & Machine Learning</strong> at 
+                            <em>Galgotias College of Engineering and Technology</em>, Greater Noida.
+                        </p>
+                        <p>
+                            My primary technical focus lies in <strong>Java backend development</strong> and building robust, 
+                            scalable server-side applications. I enjoy understanding how things work under the hood&mdash;from 
+                            object-oriented principles and memory management to multithreading, JDBC, Servlets, and 
+                            enterprise-grade microservices with <strong>Spring & Spring Boot</strong>.
+                        </p>
+                        <p>
+                            Alongside backend engineering, I actively explore <strong>Artificial Intelligence & Machine Learning</strong>, 
+                            focusing on practical integrations like <strong>Optical Character Recognition (OCR)</strong> and 
+                            <strong>Retrieval-Augmented Generation (RAG)</strong> to build intelligent software solutions.
+                        </p>
+                    </div>
+
+                    <div class="about-highlights-grid">
+                        <div class="highlight-card">
+                            <div class="highlight-icon">☕</div>
+                            <h3>Java Backend</h3>
+                            <p>Core Java, Spring Boot, Hibernate, REST APIs & JDBC</p>
+                        </div>
+                        <div class="highlight-card">
+                            <div class="highlight-icon">🤖</div>
+                            <h3>AI / ML & RAG</h3>
+                            <p>Python, Document OCR, Vector Search, Semantic Retrieval</p>
+                        </div>
+                        <div class="highlight-card">
+                            <div class="highlight-icon">🗄️</div>
+                            <h3>Database Systems</h3>
+                            <p>MySQL, Relational Schema Design, Spring Data JPA</p>
+                        </div>
+                        <div class="highlight-card">
+                            <div class="highlight-icon">🚀</div>
+                            <h3>Problem Solving</h3>
+                            <p>Data Structures, Clean Code & Modular Architecture</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Skills Section -->
+        <section id="skills" class="section section-alt">
+            <div class="container">
+                <div class="section-header">
+                    <span class="section-subtitle">What I work with</span>
+                    <h2 class="section-title">Technical Skills</h2>
+                    <div class="section-line"></div>
+                </div>
+
+                <div class="skills-grid">
+                    <!-- Category 1: Backend & Java -->
+                    <div class="skill-group-card">
+                        <div class="group-header">
+                            <div class="group-icon">☕</div>
+                            <div>
+                                <h3>Backend & Java</h3>
+                                <p>Core logic, frameworks & APIs</p>
+                            </div>
+                        </div>
+                        <div class="skill-tags">
+                            <span class="skill-tag">Java (Core & Adv)</span>
+                            <span class="skill-tag">Spring Boot</span>
+                            <span class="skill-tag">Spring MVC</span>
+                            <span class="skill-tag">RESTful APIs</span>
+                            <span class="skill-tag">JDBC</span>
+                            <span class="skill-tag">Servlets & JSP</span>
+                            <span class="skill-tag">Hibernate / JPA</span>
+                            <span class="skill-tag">OOP & Collections</span>
+                        </div>
+                    </div>
+
+                    <!-- Category 2: AI / ML & Python -->
+                    <div class="skill-group-card">
+                        <div class="group-header">
+                            <div class="group-icon">🧠</div>
+                            <div>
+                                <h3>AI & Machine Learning</h3>
+                                <p>Data science & intelligent models</p>
+                            </div>
+                        </div>
+                        <div class="skill-tags">
+                            <span class="skill-tag">Python</span>
+                            <span class="skill-tag">Machine Learning</span>
+                            <span class="skill-tag">RAG Architecture</span>
+                            <span class="skill-tag">OCR (Optical Character Recognition)</span>
+                            <span class="skill-tag">NumPy</span>
+                            <span class="skill-tag">Pandas</span>
+                            <span class="skill-tag">Data Preprocessing</span>
+                        </div>
+                    </div>
+
+                    <!-- Category 3: Databases -->
+                    <div class="skill-group-card">
+                        <div class="group-header">
+                            <div class="group-icon">🗄️</div>
+                            <div>
+                                <h3>Databases & Storage</h3>
+                                <p>Data persistence & modeling</p>
+                            </div>
+                        </div>
+                        <div class="skill-tags">
+                            <span class="skill-tag">MySQL</span>
+                            <span class="skill-tag">SQL Queries</span>
+                            <span class="skill-tag">Relational Modeling</span>
+                            <span class="skill-tag">Spring Data JPA</span>
+                            <span class="skill-tag">CRUD Operations</span>
+                        </div>
+                    </div>
+
+                    <!-- Category 4: Web & Tools -->
+                    <div class="skill-group-card">
+                        <div class="group-header">
+                            <div class="group-icon">🛠️</div>
+                            <div>
+                                <h3>Tools & Web Technologies</h3>
+                                <p>Development & collaboration workflow</p>
+                            </div>
+                        </div>
+                        <div class="skill-tags">
+                            <span class="skill-tag">Git & GitHub</span>
+                            <span class="skill-tag">Maven</span>
+                            <span class="skill-tag">Postman</span>
+                            <span class="skill-tag">HTML5 & CSS3</span>
+                            <span class="skill-tag">JavaScript (ES6+)</span>
+                            <span class="skill-tag">VS Code / IntelliJ</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Projects Section -->
+        <section id="projects" class="section">
+            <div class="container">
+                <div class="section-header">
+                    <span class="section-subtitle">Portfolio Showcase</span>
+                    <h2 class="section-title">Featured Projects</h2>
+                    <div class="section-line"></div>
+                </div>
+
+                <!-- Interactive Category Filter Tabs -->
+                <div class="project-filter-wrapper">
+                    <button class="project-filter-btn active" data-filter="all">
+                        <span>All Works</span> <span class="filter-count">4</span>
+                    </button>
+                    <button class="project-filter-btn" data-filter="java">
+                        <span>Java &amp; Spring Backend</span> <span class="filter-count">3</span>
+                    </button>
+                    <button class="project-filter-btn" data-filter="aiml">
+                        <span>AI / ML &amp; Python</span> <span class="filter-count">1</span>
+                    </button>
+                </div>
+
+                <div class="projects-grid" id="projects-grid">
+                    <!-- Project 1: DocScanner -->
+                    <article class="project-card" data-category="aiml">
+                        <div class="project-window-bar">
+                            <div class="window-controls">
+                                <span class="control-dot dot-close"></span>
+                                <span class="control-dot dot-min"></span>
+                                <span class="control-dot dot-expand"></span>
+                            </div>
+                            <span class="project-window-title">DocScanner.ai</span>
+                            <span class="project-category-badge badge-aiml">AI / ML &bull; RAG</span>
+                        </div>
+                        <div class="project-body">
+                            <h3 class="project-title">DocScanner &amp; Intelligent Retrieval</h3>
+                            <p class="project-desc">
+                                An end-to-end document intelligence pipeline that leverages Optical Character Recognition (OCR) 
+                                to extract raw content from unstructured documents, and integrates a Retrieval-Augmented 
+                                Generation (RAG) system for question answering and semantic search.
+                            </p>
+                            <div class="project-tech-stack">
+                                <span class="tech-pill tag-python">Python</span>
+                                <span class="tech-pill tag-ocr">Tesseract OCR</span>
+                                <span class="tech-pill tag-rag">RAG Pipeline</span>
+                                <span class="tech-pill tag-nlp">Vector Retrieval</span>
+                            </div>
+                        </div>
+                        <div class="project-actions">
+                            <a href="https://github.com/priyanshuanand051-byte" target="_blank" rel="noopener noreferrer" class="project-btn">
+                                <svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor">
+                                    <path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/>
+                                </svg>
+                                <span>Code Repository</span>
+                            </a>
+                        </div>
+                    </article>
+
+                    <!-- Project 2: Student Management System -->
+                    <article class="project-card" data-category="java">
+                        <div class="project-window-bar">
+                            <div class="window-controls">
+                                <span class="control-dot dot-close"></span>
+                                <span class="control-dot dot-min"></span>
+                                <span class="control-dot dot-expand"></span>
+                            </div>
+                            <span class="project-window-title">StudentService.java</span>
+                            <span class="project-category-badge badge-java">Spring Boot &bull; JPA</span>
+                        </div>
+                        <div class="project-body">
+                            <h3 class="project-title">Student Management System</h3>
+                            <p class="project-desc">
+                                A production-grade RESTful backend microservice architecture for managing student enrollments, 
+                                academic courses, and administrative tracking. Built with Spring Boot, Spring Data JPA, 
+                                and relational database modeling on MySQL.
+                            </p>
+                            <div class="project-tech-stack">
+                                <span class="tech-pill tag-java">Java</span>
+                                <span class="tech-pill tag-spring">Spring Boot</span>
+                                <span class="tech-pill tag-jpa">Spring Data JPA</span>
+                                <span class="tech-pill tag-mysql">MySQL</span>
+                                <span class="tech-pill tag-rest">REST APIs</span>
+                            </div>
+                        </div>
+                        <div class="project-actions">
+                            <a href="https://github.com/priyanshuanand051-byte" target="_blank" rel="noopener noreferrer" class="project-btn">
+                                <svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor">
+                                    <path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/>
+                                </svg>
+                                <span>Code Repository</span>
+                            </a>
+                        </div>
+                    </article>
+
+                    <!-- Project 3: Student Login & Auth System -->
+                    <article class="project-card" data-category="java">
+                        <div class="project-window-bar">
+                            <div class="window-controls">
+                                <span class="control-dot dot-close"></span>
+                                <span class="control-dot dot-min"></span>
+                                <span class="control-dot dot-expand"></span>
+                            </div>
+                            <span class="project-window-title">AuthFilter.java</span>
+                            <span class="project-category-badge badge-java">Java Web &bull; Security</span>
+                        </div>
+                        <div class="project-body">
+                            <h3 class="project-title">Student Authentication &amp; Session System</h3>
+                            <p class="project-desc">
+                                A robust authentication module enforcing secure user registration, session management, 
+                                request interceptor filters, and database connection pooling using Java Servlets, 
+                                JSP, and JDBC against SQL relational schemas.
+                            </p>
+                            <div class="project-tech-stack">
+                                <span class="tech-pill tag-java">Java</span>
+                                <span class="tech-pill tag-servlet">Servlets &amp; JSP</span>
+                                <span class="tech-pill tag-jdbc">JDBC</span>
+                                <span class="tech-pill tag-security">Session Filters</span>
+                                <span class="tech-pill tag-mysql">MySQL</span>
+                            </div>
+                        </div>
+                        <div class="project-actions">
+                            <a href="https://github.com/priyanshuanand051-byte" target="_blank" rel="noopener noreferrer" class="project-btn">
+                                <svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor">
+                                    <path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/>
+                                </svg>
+                                <span>Code Repository</span>
+                            </a>
+                        </div>
+                    </article>
+
+                    <!-- Project 4: Expense Tracker & Utilities -->
+                    <article class="project-card" data-category="java">
+                        <div class="project-window-bar">
+                            <div class="window-controls">
+                                <span class="control-dot dot-close"></span>
+                                <span class="control-dot dot-min"></span>
+                                <span class="control-dot dot-expand"></span>
+                            </div>
+                            <span class="project-window-title">ExpenseTracker.java</span>
+                            <span class="project-category-badge badge-java">Core Java &bull; Streams</span>
+                        </div>
+                        <div class="project-body">
+                            <h3 class="project-title">Personal Expense Tracker &amp; Utilities</h3>
+                            <p class="project-desc">
+                                A suite of Java applications focusing on daily expense tracking, budget categorization, 
+                                and computational algorithms built using OOP design patterns, persistent I/O, 
+                                and the modern Java 8+ Streams API.
+                            </p>
+                            <div class="project-tech-stack">
+                                <span class="tech-pill tag-java">Core Java</span>
+                                <span class="tech-pill tag-stream">Streams API</span>
+                                <span class="tech-pill tag-collection">Collections</span>
+                                <span class="tech-pill tag-jdbc">JDBC</span>
+                                <span class="tech-pill tag-oop">OOP Patterns</span>
+                            </div>
+                        </div>
+                        <div class="project-actions">
+                            <a href="https://github.com/priyanshuanand051-byte" target="_blank" rel="noopener noreferrer" class="project-btn">
+                                <svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor">
+                                    <path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/>
+                                </svg>
+                                <span>Code Repository</span>
+                            </a>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- Education Section -->
+        <section id="education" class="section section-alt">
+            <div class="container">
+                <div class="section-header">
+                    <span class="section-subtitle">Academic Background</span>
+                    <h2 class="section-title">Education</h2>
+                    <div class="section-line"></div>
+                </div>
+
+                <div class="education-timeline">
+                    <div class="education-card">
+                        <div class="edu-badge">2024 &ndash; Present</div>
+                        <div class="edu-header">
+                            <div class="edu-icon">🎓</div>
+                            <div>
+                                <h3 class="edu-degree">Bachelor of Technology (B.Tech)</h3>
+                                <h4 class="edu-field">Artificial Intelligence & Machine Learning</h4>
+                            </div>
+                        </div>
+                        <p class="edu-institution">
+                            <strong>Galgotias College of Engineering and Technology (GCET)</strong>
+                        </p>
+                        <p class="edu-location">
+                            <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                                <circle cx="12" cy="10" r="3"></circle>
+                            </svg>
+                            Greater Noida, Uttar Pradesh, India
+                        </p>
+                        <div class="edu-coursework">
+                            <span class="cw-label">Key Subjects:</span>
+                            <span class="cw-pill">Data Structures & Algorithms</span>
+                            <span class="cw-pill">Database Management Systems (DBMS)</span>
+                            <span class="cw-pill">Object Oriented Programming</span>
+                            <span class="cw-pill">Artificial Intelligence & ML</span>
+                            <span class="cw-pill">Computer Networks</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="section">
+            <div class="container">
+                <div class="section-header">
+                    <span class="section-subtitle">Let's Connect</span>
+                    <h2 class="section-title">Contact Me</h2>
+                    <div class="section-line"></div>
+                </div>
+
+                <div class="contact-grid">
+                    <div class="contact-info-card">
+                        <h3>Let's talk about opportunities!</h3>
+                        <p>
+                            I am actively looking for internships, entry-level backend developer roles, and 
+                            collaborative technical projects. Feel free to reach out via email or connect on social media.
+                        </p>
+
+                        <div class="contact-channels">
+                            <div class="channel-item">
+                                <div class="channel-icon">📧</div>
+                                <div>
+                                    <div class="channel-label">Email</div>
+                                    <a href="mailto:priyanshuanand051@gmail.com" class="channel-value">priyanshuanand051@gmail.com</a>
+                                </div>
+                                <button class="copy-btn" id="copy-email-btn" title="Copy email address" aria-label="Copy email">
+                                    <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2">
+                                        <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
+                                        <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
+                                    </svg>
+                                    <span class="copy-tooltip" id="copy-tooltip">Copy</span>
+                                </button>
+                            </div>
+
+                            <div class="channel-item">
+                                <div class="channel-icon">💼</div>
+                                <div>
+                                    <div class="channel-label">LinkedIn</div>
+                                    <a href="https://www.linkedin.com/in/priyanshukumar3" target="_blank" rel="noopener noreferrer" class="channel-value">linkedin.com/in/priyanshukumar3</a>
+                                </div>
+                            </div>
+
+                            <div class="channel-item">
+                                <div class="channel-icon">💻</div>
+                                <div>
+                                    <div class="channel-label">GitHub</div>
+                                    <a href="https://github.com/priyanshuanand051-byte" target="_blank" rel="noopener noreferrer" class="channel-value">github.com/priyanshuanand051-byte</a>
+                                </div>
+                            </div>
+
+                            <div class="channel-item">
+                                <div class="channel-icon">📍</div>
+                                <div>
+                                    <div class="channel-label">Location</div>
+                                    <span class="channel-value">Greater Noida / Delhi NCR, India</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="contact-form-card">
+                        <h3>Send a Quick Message</h3>
+                        <form id="contact-form">
+                            <div class="form-group">
+                                <label for="name">Your Name</label>
+                                <input type="text" id="name" name="name" placeholder="John Doe" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="email">Your Email</label>
+                                <input type="email" id="email" name="email" placeholder="john@example.com" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="subject">Subject</label>
+                                <input type="text" id="subject" name="subject" placeholder="Project or Internship Discussion" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="message">Message</label>
+                                <textarea id="message" name="message" rows="4" placeholder="Hi Priyanshu, I came across your portfolio..." required></textarea>
+                            </div>
+                            <button type="submit" class="btn btn-primary btn-block">
+                                <span>Send Message</span>
+                                <svg class="btn-icon" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2">
+                                    <line x1="22" y1="2" x2="11" y2="13"></line>
+                                    <polygon points="22 2 15 22 11 13 2 9 22 2"></polygon>
+                                </svg>
+                            </button>
+                            <p class="form-note" id="form-status"></p>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container footer-container">
+            <div class="footer-brand">
+                <div class="footer-logo">&lt;PK/&gt; Priyanshu Kumar</div>
+                <p>Java Backend Developer & AI/ML Enthusiast</p>
+            </div>
+            <div class="footer-socials">
+                <a href="https://github.com/priyanshuanand051-byte" target="_blank" rel="noopener noreferrer" aria-label="GitHub">GitHub</a>
+                <a href="https://www.linkedin.com/in/priyanshukumar3" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">LinkedIn</a>
+                <a href="mailto:priyanshuanand051@gmail.com" aria-label="Email">Email</a>
+            </div>
         </div>
-
-    </div>
-
-</section>
-
-
-<!-- About -->
-<section id="about">
-
-    <h2>About Me</h2>
-
-    <p class="section-text">
-        I am a B.Tech student specializing in Artificial Intelligence
-        and Machine Learning. My primary interest is Java backend
-        development, and I am currently learning Spring and Spring Boot.
-        I also explore AI/ML, RAG, and modern web technologies.
-    </p>
-
-</section>
-
-
-<!-- Skills -->
-<section id="skills">
-
-    <h2>My Skills</h2>
-
-    <div class="skills-container">
-
-        <div class="skill-card">
-            <h3>Java</h3>
-            <p>Core Java, JDBC, Servlet, JSP, Spring</p>
+        <div class="footer-bottom">
+            <p>&copy; 2026 Priyanshu Kumar. Designed & Built with passion.</p>
         </div>
+    </footer>
 
-        <div class="skill-card">
-            <h3>Web Development</h3>
-            <p>HTML, CSS, JavaScript</p>
-        </div>
+    <!-- Back to top button -->
+    <button id="back-to-top" class="back-to-top" aria-label="Back to top" title="Back to top">
+        <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2.5">
+            <polyline points="18 15 12 9 6 15"></polyline>
+        </svg>
+    </button>
 
-        <div class="skill-card">
-            <h3>Database</h3>
-            <p>MySQL, SQL, Spring JDBC, JPA</p>
-        </div>
-
-        <div class="skill-card">
-            <h3>AI / ML</h3>
-            <p>Python, Machine Learning, RAG, OCR</p>
-        </div>
-
-    </div>
-
-</section>
-
-
-<!-- Projects -->
-<section id="projects">
-
-    <h2>My Projects</h2>
-
-    <div class="projects-container">
-
-        <div class="project-card">
-
-            <h3>DocScanner</h3>
-
-            <p>
-                A document processing project that uses OCR to extract
-                text from documents and explores RAG for intelligent
-                information retrieval.
-            </p>
-
-            <a href="#" class="project-link">View Project</a>
-
-        </div>
-
-
-        <div class="project-card">
-
-            <h3>Student Management System</h3>
-
-            <p>
-                A backend-focused application for managing student
-                information using Java, Spring Boot, JPA and MySQL.
-            </p>
-
-            <a href="#" class="project-link">View Project</a>
-
-        </div>
-
-
-        <div class="project-card">
-
-            <h3>Student Login System</h3>
-
-            <p>
-                A Java web application implementing registration,
-                login, sessions, filters and database connectivity.
-            </p>
-
-            <a href="#" class="project-link">View Project</a>
-
-        </div>
-
-    </div>
-
-</section>
-
-
-<!-- Education -->
-<section id="education">
-
-    <h2>Education</h2>
-
-    <div class="education-card">
-
-        <h3>B.Tech — Artificial Intelligence & Machine Learning</h3>
-
-        <p>
-            Galgotias College of Engineering and Technology
-        </p>
-
-        <p>
-            Greater Noida, Uttar Pradesh
-        </p>
-
-    </div>
-
-</section>
-
-
-<!-- Contact -->
-<section id="contact">
-
-    <h2>Contact Me</h2>
-
-    <p>
-        I'm open to internships, projects and learning opportunities.
-    </p>
-
-    <div class="contact-links">
-
-        <a href="priyanshuanand051@email.com">Email</a>
-
-        <a href="https://github.com/priyanshuanand051-byte" target="_blank">GitHub</a>
-
-        <a href="https://www.linkedin.com/in/priyanshukumar3
-
-" target="_blank">LinkedIn</a>
-
-    </div>
-
-</section>
-
-
-<!-- Footer -->
-<footer>
-
-    <p>
-        © 2026 Priyanshu Kumar. All Rights Reserved.
-    </p>
-
-</footer>
-
-
-<script src="script.js"></script>
-```
-
+    <script src="script.js"></script>
 </body>
-
 </html>
